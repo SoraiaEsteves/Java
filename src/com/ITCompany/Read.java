@@ -19,7 +19,7 @@ public class Read {
 
 //            check if the storage file exists, if it doesn't, create a new one
         try {
-            File file = new File(".\\src\\programmers.xml");
+            File file = new File("./resources/programmers.xml");
             if (!file.exists()) {
                 Menu.initializeFile(list1, list2, date1);
             }
@@ -27,7 +27,7 @@ public class Read {
             //                read the xml file and save the information in the corresponding Array List
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
-            Document doc = builder.parse(".\\src\\programmers.xml");
+            Document doc = builder.parse("./resources/programmers.xml");
 
 //                read the date node
             NodeList dateList = doc.getElementsByTagName("currentDate");

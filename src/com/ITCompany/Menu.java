@@ -78,7 +78,7 @@ public class Menu {
     public static void save(ArrayList<ActiveProgrammers> list1, ArrayList<ProjectTeam> list2, ArrayList<Date> date1) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         try {
-            File file = new File("src/programmers.xml");
+            File file = new File("./resources/programmers.xml");
             if (!file.exists()) {
                 initializeFile(list1, list2, date1);
             }
@@ -208,7 +208,7 @@ public class Menu {
             TransformerFactory transformerFactory = TransformerFactory.newInstance();
             Transformer transformer = transformerFactory.newTransformer();
             DOMSource source = new DOMSource(doc);
-            StreamResult result = new StreamResult(new File(".\\src\\programmers.xml"));
+            StreamResult result = new StreamResult(new File("./resources/programmers.xml"));
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
             transformer.transform(source, result);
             System.out.println("Your data has been saved!");
