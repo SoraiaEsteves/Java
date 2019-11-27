@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ITCompany>
+        
+    
+    
+    
+    
+    
+    
+
+    <currentDate>
+        <date>01/01/2020</date>
+    </currentDate>
+    <programmer>
+        <id>1</id>
+        <firstName>Kaladin</firstName>
+        <lastName>Windrunner</lastName>
+        <startDate>24/10/2019</startDate>
+        <daysWorked>13</daysWorked>
+        <salary>20</salary>
+        <active>true</active>
+        <percentage>100</percentage>
+    </programmer>
+    <programmer>
+        <id>2</id>
+        <firstName>Shallan</firstName>
+        <lastName>Lightweaver</lastName>
+        <startDate>03/11/2019</startDate>
+        <daysWorked>20</daysWorked>
+        <salary>15</salary>
+        <active>true</active>
+        <percentage>50</percentage>
+    </programmer>
+    <programmer>
+        <id>3</id>
+        <firstName>Renarin</firstName>
+        <lastName>Truthwatcher</lastName>
+        <startDate>12/11/2019</startDate>
+        <daysWorked>27</daysWorked>
+        <salary>10</salary>
+        <active>true</active>
+        <percentage>100</percentage>
+    </programmer>
+    <programmer>
+        <id>4</id>
+        <firstName>Jasnah</firstName>
+        <lastName>Elsecaller</lastName>
+        <startDate>23/11/2019</startDate>
+        <daysWorked>17</daysWorked>
+        <salary>25</salary>
+        <active>true</active>
+        <percentage>50</percentage>
+    </programmer>
+    <project>
+        <id>1</id>
+        <startDate>01/11/2019</startDate>
+        <endDate>18/11/2019</endDate>
+        <programmerID>1</programmerID>
+        <programmerID>2</programmerID>
+        <programmerActivity>Tester</programmerActivity>
+        <programmerActivity>Analyst</programmerActivity>
+    </project>
+    <project>
+        <id>2</id>
+        <startDate>15/11/2019</startDate>
+        <endDate>30/11/2019</endDate>
+        <programmerID>3</programmerID>
+        <programmerID>4</programmerID>
+        <programmerActivity>Cookie Hunter</programmerActivity>
+        <programmerActivity>Gatherer of Pizza</programmerActivity>
+    </project>
+</ITCompany>
