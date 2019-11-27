@@ -23,7 +23,7 @@ public class ProjectTeam {
     public ProjectTeam(int i, String s, String s1, int i1, String tester, int i2, String analyst) {
     }
 
-//    add a new project to the pool of available projects
+    //    add a new project to the pool of available projects
     public void addProject(ArrayList<ActiveProgrammers> list1, ArrayList<ProjectTeam> list2) {
         Scanner scanner = new Scanner(System.in);
         ArrayList<Integer> adding = new ArrayList<>();
@@ -62,7 +62,7 @@ public class ProjectTeam {
                     String yn = scanner.nextLine();
                     if (yn.equals("Y") || yn.equals("y")) {
                         System.out.println("The programmers were added to the team.");
-                        for (ActiveProgrammers programmer: list1) {
+                        for (ActiveProgrammers programmer : list1) {
                             if (!programmer.isActive()) {
                                 adding.add(programmer.getId());
                                 programmer.setActive(true);

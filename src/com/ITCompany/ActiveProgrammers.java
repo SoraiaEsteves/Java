@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
-public class ActiveProgrammers implements Programmers{
+public class ActiveProgrammers implements Programmers {
     public int id;
     public String firstName;
     public String lastName;
@@ -69,7 +69,7 @@ public class ActiveProgrammers implements Programmers{
         return percentage;
     }
 
-//    add a programmer to the pool of programmers in the system
+    //    add a programmer to the pool of programmers in the system
     public void addProgrammer(ArrayList<ActiveProgrammers> list1) throws ParseException {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         Scanner scanner = new Scanner(System.in);
@@ -94,11 +94,10 @@ public class ActiveProgrammers implements Programmers{
 
     }
 
-//    calculate the salary of a programmer based on the amount of days worked and the percentage they receive
+    //    calculate the salary of a programmer based on the amount of days worked and the percentage they receive
     public double calculateSalary(ActiveProgrammers person) {
-        return person.getDaysWorked()*person.getSalary()*person.getPercentage()/100;
+        return person.getDaysWorked() * person.getSalary() * person.getPercentage() / 100;
     }
-
 
 
 }

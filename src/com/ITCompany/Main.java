@@ -8,7 +8,7 @@ import java.util.Date;
 public class Main {
 
     public static void main(String[] args) throws ParseException {
-//        inicialize the arrays to save the data we want stored
+//        initialize the arrays to save the data we want stored
         ArrayList<ActiveProgrammers> list1 = new ArrayList<>();
         ArrayList<ProjectTeam> list2 = new ArrayList<>();
         ArrayList<Date> date1 = new ArrayList<>();

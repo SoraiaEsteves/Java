@@ -24,7 +24,7 @@ import java.util.Scanner;
 
 public class Menu {
 
-//    set up of the options available on the application
+    //    set up of the options available on the application
     public static void startMenu(ArrayList<ActiveProgrammers> list1, ArrayList<ProjectTeam> list2, ArrayList<Date> date1) throws ParseException {
         System.out.println("Program is loading...");
         Scanner scanner = new Scanner(System.in);
@@ -62,7 +62,7 @@ public class Menu {
         }
     }
 
-//    list printed of the options
+    //    list printed of the options
     public static void printMenu() {
         System.out.println("\t 0 - Options");
         System.out.println("\t 1 - Print Company Report");
@@ -74,12 +74,12 @@ public class Menu {
     }
 
 
-//    save the data to the storage file
+    //    save the data to the storage file
     public static void save(ArrayList<ActiveProgrammers> list1, ArrayList<ProjectTeam> list2, ArrayList<Date> date1) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         try {
             File file = new File("src/programmers.xml");
-            if(!file.exists()) {
+            if (!file.exists()) {
                 initializeFile(list1, list2, date1);
             }
 
@@ -91,13 +91,13 @@ public class Menu {
 
 //            save the date node
             NodeList dateList = doc.getElementsByTagName("currentDate");
-            for (int i = 0; i < dateList.getLength();i++) {
+            for (int i = 0; i < dateList.getLength(); i++) {
                 Node eachNode = dateList.item(i);
                 eachNode.getParentNode().removeChild(eachNode);
                 i--;
             }
 
-            for (int i = 0; i <date1.size() ; i++) {
+            for (int i = 0; i < date1.size(); i++) {
                 String date = dateFormat.format(date1.get(i));
                 Element dates = doc.createElement("currentDate");
 
@@ -111,13 +111,13 @@ public class Menu {
 //            save the programmers node
             NodeList programmerList = doc.getElementsByTagName("programmer");
 
-            for (int i = 0; i < programmerList.getLength();i++) {
+            for (int i = 0; i < programmerList.getLength(); i++) {
                 Node eachNode = programmerList.item(i);
                 eachNode.getParentNode().removeChild(eachNode);
                 i--;
             }
 
-                for (int i = 0; i <list1.size() ; i++) {
+            for (int i = 0; i < list1.size(); i++) {
                 String id = Integer.toString(list1.get(i).getId());
                 String firstName = list1.get(i).getFirstName();
                 String lastName = list1.get(i).getLastName();
@@ -172,7 +172,7 @@ public class Menu {
                 i--;
             }
 
-           for (ProjectTeam project : list2) {
+            for (ProjectTeam project : list2) {
                 String id = Integer.toString(project.getId());
                 String startDate = dateFormat.format(project.getStartDate());
                 String endDate = dateFormat.format(project.getEndDate());
@@ -190,12 +190,12 @@ public class Menu {
                 proj.appendChild(pEnd);
 
 
-                for (int j = 0; j <project.getProgrammerID().size() ; j++) {
+                for (int j = 0; j < project.getProgrammerID().size(); j++) {
                     Element prog = doc.createElement("programmerID");
                     prog.appendChild(doc.createTextNode(project.getProgrammerID().get(j).toString()));
                     proj.appendChild(prog);
                 }
-                for ( int k = 0; k <project.getProgrammerActivity().size() ; k++) {
+                for (int k = 0; k < project.getProgrammerActivity().size(); k++) {
                     Element prog = doc.createElement("programmerActivity");
                     prog.appendChild(doc.createTextNode(project.getProgrammerActivity().get(k)));
                     proj.appendChild(prog);
@@ -218,10 +218,9 @@ public class Menu {
         }
 
 
-
     }
 
-//    add information to the xml file
+    //    add information to the xml file
     public static void initializeFile(ArrayList<ActiveProgrammers> list1, ArrayList<ProjectTeam> list2, ArrayList<Date> date1) {
         ArrayList<ActiveProgrammers> list3 = new ArrayList<>();
         ArrayList<ProjectTeam> list4 = new ArrayList<>();
@@ -231,7 +230,7 @@ public class Menu {
         ArrayList<String> memberActivity2 = new ArrayList<>();
         ArrayList<Date> date = new ArrayList<>();
 
-        Date systemDate = new Date(1/11/2019);
+        Date systemDate = new Date(1 / 11 / 2019);
         date.add(systemDate);
 
         ActiveProgrammers programmer1 = new ActiveProgrammers(1, "Kaladin", "Windrunner", "24/10/2019", 0, 20, true, 100);
@@ -261,7 +260,7 @@ public class Menu {
 
     }
 
-//    update the system according to the specifications
+    //    update the system according to the specifications
     public static void update(ArrayList<ActiveProgrammers> list1, ArrayList<ProjectTeam> list2, ArrayList<Date> date1) {
         Calendar time = Calendar.getInstance();
         time.setTime(date1.get(0));
